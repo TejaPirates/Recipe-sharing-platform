@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Kanit:wght@500&family=Libre+Baskerville:wght@700&family=Oswald:wght@200;500&family=Poppins:wght@500&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-margin-block-start: 100px;
+}
+
+body{
+    min-height: 100vh;
+    background-color: #fbfbfb;
+}
+
+.navigation-bar{
+    
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #ff442b;  
+    align-items: center ;
+    
+}
+
+.logo-image{
+    height: 70px;
+    width: 150px;
+    margin-left: 40%;
+    
+} 
+
+.navigation-links a{
+    text-decoration: none;
+    font-family: kanit;
+    color: #ffffff;
+    margin-left: 20px;
+    padding: 5px 10px;
+    
+    
+    
+}
+.navigation-links{
+    margin-right: 5%;
+}
+
+.navigation-links a:hover{
+    background-color: rgb(60, 60, 60);
+    border-radius: 7px;
+
+}
+.quote{
+    min-width: 400px;
+    width: 60%;
+    max-width: 600px;
+    
+
+}
+.quotes-{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    font-family: bungee;
+    font-variant: small-caps;
+    font-size: 40px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    color: #ffaa75;
+}
+
+.landing-page{
+
+    margin-top: 120px;
+    
+
+    
+    width: 100%;
+    
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column; 
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+
+}
+.content{
+    margin-left: 15%;
+    margin-top: 19px;
+    
+    
+}
+
+
+.landing-page .heading-line{
+    font-family: poppins;
+    font-size: 45px;
+    
+    font-style: italic;
+    
+}
+.landing-page .about-summary{
+    font-size: medium;
+    color: rgb(0, 0, 0);
+    font-family: poppins;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}   
+
+.landing-page .goto-button-link{
+    border: 1px solid black;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: large;
+    font-family: kanit;
+    padding: 5px 10px;
+    border-radius: 8px;
+    background: rgba(252,252,252,0.2);
+    
+}
+.landing-page .goto-button-link:hover{
+    background: linear-gradient(to right,rgb(255, 95, 95),rgb(255, 61, 61));
+    color: rgb(255, 255, 255);
+    border: 2px double rgb(217, 217, 217);
+}
+
+.menu-button {
+    background-color: #ff442b;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+  
+.menu-button-div {
+    position: relative;
+    display: inline-block;
+    display: none;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    margin-top: 5px;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    
+}
+  
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    margin: 0;
+
+}
+  
+.dropdown-content a:hover {background-color: #ddd;}
+  
+.menu-button-div:hover .dropdown-content {display: block;}
+  
+.menu-button-div:hover .menu-button {background-color: #343534;border-radius: 4px;}
+
+#meal-plan-page{
+    height: 50vh;
+    width: 100%;
+    
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container{
+    height: 20em;
+    width: 35em;
+    border-radius: 7px;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 2px solid rgba(219, 219, 219, 0.99);
+    border-right: 2px solid rgb(219, 219, 219,0.99);
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+.no-of-day , .no-of-meal{
+    margin-top: 40px;
+    margin-left: 70px;
+}
+
+label{
+    font-size: 20px;
+    font-family: kanit;
+    margin-right: 50px;
+}
+input[type='number']{
+  width: 50%;  
+  height: 25px;
+  font-family: kanit;
+  font-size: large;
+  border-radius: 4px;
+  border: 0.5px solid ;
+  outline: cyan;
+}
+
+.radio-button{
+    display: flex;
+    flex-direction: row;
+    margin: none;
+    padding: 0;
+    margin-top: 30px;
+    font-family: kanit;
+    font-size: medium;
+}
+
+label[for="calories"]{
+    margin-right: 84px ;
+
+}
+#plan-your-meal{
+    height: 50px;
+    
+    width: 150px;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+    background-color:#ff442b;
+    border: 0;
+    color: white;
+    font-family: kanit;
+    font-size: 14px;
+    border-radius: 7px;
+}
+.generate-meal-button{
+
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#plan-your-meal:hover{
+    background-color: #ef0000;
+}
+
+input[type='number']:focus{
+    box-shadow: 0px 0px 7px rgb(39, 135, 237);
+}
+.total-kcal{
+    height: 20%;
+    width: 100vw;
+    background-color: #fbfbfb;
+    display: flex;
+    padding-left:60%;
+    font-size: large;font-family: kanit;
+    
+}
+
+.meal-plan{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    width: 70%;
+    
+
+}
+.meal-plan > div {
+    background-color: #ffffff;
+    border-bottom: 1.5px solid rgb(178, 178, 178);
+    border-right: 1.5px solid rgb(178, 178, 178);
+
+}
+
+.meal-plan > div:hover{
+    box-shadow: 2px 1px 30px rgb(215, 215, 215);
+}
+
+.dishes{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 150px;
+    
+}
+.lunch , .breakfast , .snacks-1, .snacks-2, .dinner{
+    display: none;
+}
+.head{
+    text-align: center;
+    font: 22px;
+    font-family: Kanit;
+}
+
+.dish{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: kanit;
+
+}
+
+.qty{
+    flex: 1.2;
+    margin-left: 4%;
+}
+.dish-name{
+    flex: 4;
+}
+.dish-calories{
+    flex: 1;
+}
+
+.dish-name{
+    color: rgb(118, 97, 255);
+}
+
+
+.meal-plan-benefits{
+    margin-top: 20px;
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    
+    width: 85%;
+}
+.benefits{
+    background-color: rgb(255, 232, 232);
+    border-radius: 10px;
+
+    
+}
+.benefits:hover{
+    background-color:  rgb(254, 218, 218);
+    box-shadow: 2px 3px 4px rgb(175, 175, 175);
+    
+}
+.title-benefit{
+    font-family: kanit;
+    font-size: 28px;
+    margin-top: 25px;
+    text-align: center;
+    padding: 0 10px;
+    border-bottom: 2px solid rgb(177, 177, 177);
+}
+
+.benefits:hover .title-benefit{
+    border-bottom: 2px solid rgb(75, 75, 75);
+}
+
+.dummy-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.dummy-cont-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.benefit-content{
+    margin-top: 15px;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 28px;
+    padding: 10px 20px;
+}
+
+
+#youtube-refer{
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    width: 100%;
+}
+
+#youtube-refer iframe{
+    height: 60%;
+    width: 65%;
+}
+
+
+
+
+
+@media (max-width: 750px){
+    .menu-button-div{
+        margin-right: 70px;
+        display: block;
+    }
+    .main-links{
+        display: none;
+    }
+
+    .meal-plan-benefits{
+        grid-template-columns: 1fr;
+    }
+    .meal-plan{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.icons{
+    height: 80px;
+    width: 100vw;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid rgb(225, 225, 225);
+}
+
+.icons a{
+    background: #ecf0f3;
+    position: relative;
+    height: 60px;
+    width: 60px;
+    margin: 0 10px;
+    display: inline-flex;
+    text-decoration: none;
+    border-radius: 50%;
+    transition: all 0.3s;
+    
+}
+.icons a:hover:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 50%;
+    background: #ecf0f3;
+    box-shadow: inset -3px -3px 7px #ffffff,
+                inset 3px 3px 5px #ceced1;
+}
+.icons a i{
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    font-size: 25px;
+    line-height: 60px;
+}
+  .icons a:hover i{
+    transform: scale(0.9);
+}
+  .icons a.fb i{
+    color: #4267B2;
+}
+  .icons a.twitter i{
+    color: #1DA1F2;
+}
+  .icons a.insta i{
+    color: #E1306C;
+}
+
+.icons a.yt i{
+    color: #ff0000;
+}
+  

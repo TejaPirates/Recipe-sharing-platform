@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Flavour</title>
+    <link rel="icons" type="image/png" href="title-logo.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+
+</head>
+<body>
+    <header class="navigation-bar">
+        <a href="" ><img src="./funflavour.png"  class="logo-image" alt="logo"></a>
+        <nav class="navigation-links">
+            <div class="main-links">
+                <a href="/index.html" id="home-page">HOME</a>
+                <a href="/about-page/about.html" id="about-page">ABOUT US</a>
+                <a href="#follow-us-page" id="follow-page">FOLLOW US</a>
+                <a href="#youtube-refer" class="'last-link" id="refer-page">REFER</a>
+            </div>
+            <div class="menu-button-div">
+                <a href="" class="menu-button">MENU</a>
+                    <div class="dropdown-content">
+                        <a href="/index.html" id="home-page">HOME</a>
+                        <a href="/about-page/about.html" id="about-page">ABOUT US</a>
+                        <a href="#follow-us-page" id="follow-page">FOLLOW US</a>
+                        <a href="#youtube-refer" id="refer-page">REFER</a>
+                    </div>
+                
+            </div>
+        </nav>
+    </header>
+    <div class="landing-page">
+        <div class="content">
+            <div class="heading-line">Serving You Since <br>2015</div>
+            <div class="about-summary">Fun Flavour is meal planner and grocery list generator. <br>It creates personalized meal plans based on your <br> food preferences. <br> <b> Create your meal plan right here in seconds.</b></div>
+            <button class="goto-button-link" onClick="document.getElementById('meal-plan-page').scrollIntoView();">Plan Your Meal</button>
+            
+        </div>
+        <div class="image-cont">
+            <img src="/man-carrying.jpg" alt="">
+        </div>
+    </div>
+    <div id="meal-plan-page">
+        <div class="main-container">
+            <div class="no-of-day">
+                <label for="calories">Calories</label>
+                <input type="number" id="calories" placeholder="  #### Calories (kcal)" name="calories" min="100" max="2500" step="100" onkeydown="return false">
+            </div>
+            <div class="no-of-meal">
+                <label for="meals">No of meals</label>
+                <input type="number" name="meals" placeholder="  ## (per day)" id="no-of-meals" min="2" max="5" value="" onkeydown="return false">
+            </div>
+            <div class="radio-button">
+                <input type="radio" name="nveg" class="vegetarian" style="margin-left: 100px;" value="1">Vegetarian
+                <input type="radio" name="nveg" class="vegetarian" style="margin-left: 90px;" value="2">Non Vegetarian
+            </div>
+            <div class="generate-meal-button">
+                <button id="plan-your-meal" onclick="planmeal()">GENERATE MEAL</button>
+            </div>
+        </div>
+    </div>
+    <div class="total-kcal" id="total-kcal">
+
+    </div>
+    
+    
+    <div class="dummy-cont-1" id="dummy-cont-1">
+        
+        
+        <div class="meal-plan" id="meal-plan">
+            <div class="breakfast dishes" id="breakfast">
+                <div class="head">BREAKFAST</div>
+                <div class="first-dish dish">
+                    <div class="qty" id="b-dish-qty-1"></div>
+                    <div class="dish-name" id="b-dish-name-1"></div>
+                    <div class="dish-calories" id="b-dish-calor-1"></div>
+                </div>
+                <div class="second-dish dish">
+                    <div class="qty" id="b-dish-qty-2"></div>
+                    <div class="dish-name" id="b-dish-name-2"></div>
+                    <div class="dish-calories" id="b-dish-calor-2"></div>
+                </div>
+            </div>
+            <div class="snacks-1 dishes" id="snacks-1">
+                <div class="head">SNACKS</div>
+                <div class="first-dish dish">
+                    <div class="qty" id="s1-dish-qty-1"></div>
+                    <div class="dish-name" id="s1-dish-name-1"></div>
+                    <div class="dish-calories" id="s1-dish-calor-1"></div>
+                </div>
+                <div class="second-dish dish">
+                    <div class="qty" id="s1-dish-qty-2"></div>
+                    <div class="dish-name" id="s1-dish-name-2"></div>
+                    <div class="dish-calories" id="s1-dish-calor-2"></div>
+                </div>
+            </div>
+            <div class="lunch dishes" id="lunch">
+                <div class="head">LUNCH</div>
+                <div class="first-dish dish">
+                    <div class="qty" id="l-dish-qty-1"></div>
+                    <div class="dish-name" id="l-dish-name-1"></div>
+                    <div class="dish-calories" id="l-dish-calor-1"></div>
+                </div>
+                <div class="second-dish dish">
+                    <div class="qty" id="l-dish-qty-2"></div>
+                    <div class="dish-name" id="l-dish-name-2"></div>
+                    <div class="dish-calories" id="l-dish-calor-2"></div>
+                </div>
+            
+
+            </div>
+            <div class="snacks-2 dishes" id="snacks-2">
+                <div class="head">SNACKS</div>
+                <div class="first-dish dish">
+                    <div class="qty" id="s2-dish-qty-1"></div>
+                    <div class="dish-name" id="s2-dish-name-1"></div>
+                    <div class="dish-calories" id="s2-dish-calor-1"></div>
+                </div>
+                <div class="second-dish dish">
+                    <div class="qty" id="s2-dish-qty-2"></div>
+                    <div class="dish-name" id="s2-dish-name-2"></div>
+                    <div class="dish-calories" id="s2-dish-calor-2"></div>
+                </div>
+            </div>
+            <div class="dinner dishes" id="dinner">
+                <div class="head">DINNER</div>
+                <div class="first-dish dish">
+                    <div class="qty" id="d-dish-qty-1"></div>
+                    <div class="dish-name" id="d-dish-name-1"></div>
+                    <div class="dish-calories"  id="d-dish-calor-1"></div>
+                </div>
+                <div class="second-dish dish">
+                    <div class="qty" id="d-dish-qty-2"></div>
+                    <div class="dish-name" id="d-dish-name-2"></div>
+                    <div class='dish-calories'  id="d-dish-calor-2"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+
+
+    <div class="quotes-">
+        Keep Kalm And Make <br> A Meal Plan
+    </div>
+
+    <div class="dummy-cont">
+        <div class="meal-plan-benefits">
+            <div class="benefit-1 benefits">
+                <div class="title-benefit">LEARN PORTION CONTROL</div>
+                <div class="benefit-content">
+                    Planning your own meals will allow you to see how much you’re 
+                    actually eating. This also prevents you from overeating at 
+                    restaurants, which tend to serve a way bigger 
+                    portion than you should actually be eating.
+                </div>
+            </div>
+            <div class="benefit-2 benefits">
+                <div class="title-benefit">EAT HEALTHY</div>
+                <div class="benefit-content">
+                    When you’re hungry and your blood sugar drops, you’re more 
+                    inclined to eat whatever you can get the fastest. This is 
+                    why some of us settle for the closest fast food joint with 
+                    unhealthy options. Meal planning eliminates this issue when 
+                    you have a balanced meal at your fingertips, filled with 
+                    nutrient-dense food prepped and ready to go
+                </div>
+            </div>
+            <div class="benefit-3 benefits">
+                <div class="title-benefit">SAVE TIME</div>
+                <div class="benefit-content">
+                    Being hungry and realizing you have nothing planned is 
+                    undoubtedly stressful. Instead of standing in front of your 
+                    fridge or pantry deciding what to whip up, you can have your
+                    healthy meal ready in minutes. This also saves you the hassle
+                    of cleaning up after cooking
+                </div>
+            </div>
+            <div class="benefit-4 benefits">
+                <div class="title-benefit">AVOID WASTING FOOD</div>
+                <div class="benefit-content">
+                    When it comes to meal planning, you go to the grocery store 
+                    with a plan, and know how you’re going to use all of the 
+                    items. When every food has a purpose, you
+                    won’t have to worry about items in your fridge going to waste
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="youtube-refer">
+        <iframe width="420" height="315"
+            src="https://www.youtube.com/embed/thiwHxVgKus?si=EeSUTJbCRbVbH6cB">
+            
+        </iframe>
+    </div>
+
+    <footer>
+        <div class="icons" id="follow-us-page">
+            <a href="#" class="fb"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="insta"><i class="fab fa-instagram"></i></a>
+
+            <a href="#" class="yt"><i class="fab fa-youtube"></i></a>
+        </div>
+
+    </footer>
+
+
+
+
+
+    <script src="script.js">
+        
+
+
+    </script>
+</body>
+</html>
